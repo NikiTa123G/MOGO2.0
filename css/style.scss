@@ -638,6 +638,7 @@ li{
 			}
 		}
 		.desing_tablet{
+			display: flex;
 			@media (max-width: 1100px) {
 				width: 370px;
 			}

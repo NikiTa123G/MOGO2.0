@@ -24,7 +24,11 @@ window.addEventListener("resize", function() {
 const windowHeight = window.innerHeight;
 
 // function navIvents() 
-
+document.addEventListener("DOMContentLoaded", function(){
+	if (window.scrollY > windowHeight * 0.4) {
+		nav.classList.add('color');
+	}
+});
 window.onscroll = function navIvents() {
 	const scrollY = window.scrollY;
 
@@ -43,7 +47,7 @@ window.onscroll = function navIvents() {
 	}
 }
 
-// document.addEventListener("DOMContentLoaded", navIvents());
+// 
 //===================---//nav//---======================//
 
 //===================---//parallax//---======================//

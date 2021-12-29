@@ -779,6 +779,9 @@ li {
   opacity: 0.5;
 }
 .desing .desing_body .desing_tablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   z-index: 10;
   bottom: 0;
