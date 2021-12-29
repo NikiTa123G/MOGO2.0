@@ -750,6 +750,8 @@ li {
   }
 }
 .desing .desing_body .desing_bg img {
+  -webkit-transform: translate(-10%, -10%);
+          transform: translate(-10%, -10%);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
