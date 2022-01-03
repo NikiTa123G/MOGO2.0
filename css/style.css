@@ -710,7 +710,7 @@ li {
 }
 .desing {
   overflow: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 110px;
 }
 @media (max-width: 800px) {
   .desing {
@@ -734,6 +734,7 @@ li {
           transform: translateX(-50%);
 }
 .desing .desing_body .desing_bg {
+  position: relative;
   overflow: hidden;
   height: 130vh;
   width: 115%;
@@ -750,12 +751,16 @@ li {
   }
 }
 .desing .desing_body .desing_bg img {
-  -webkit-transform: translate(-10%, 0%);
-          transform: translate(-10%, 0%);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 140vh;
+  height: 150%;
+}
+@media (min-width: 801px) {
+  .desing .desing_body .desing_bg img {
+    -webkit-transform: translate(-10%, -7%);
+            transform: translate(-10%, -7%);
+  }
 }
 @media (max-width: 800px) {
   .desing .desing_body .desing_bg img {
@@ -765,7 +770,6 @@ li {
 @media (max-height: 550px) {
   .desing .desing_body .desing_bg img {
     min-height: 550px;
-    height: auto;
   }
 }
 .desing .desing_body .desing_bg:before {
@@ -780,7 +784,7 @@ li {
   background: #fff;
   opacity: 0.5;
 }
-.desing .desing_body .desing_tablet {
+.desing .desing_body .desing_bg .desing_tablet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -792,21 +796,22 @@ li {
           transform: translateX(-50%);
 }
 @media (max-width: 1100px) {
-  .desing .desing_body .desing_tablet {
+  .desing .desing_body .desing_bg .desing_tablet {
     width: 370px;
   }
 }
 @media (max-width: 900px) {
-  .desing .desing_body .desing_tablet {
+  .desing .desing_body .desing_bg .desing_tablet {
     width: 290px;
   }
 }
 @media (max-width: 500px) {
-  .desing .desing_body .desing_tablet {
+  .desing .desing_body .desing_bg .desing_tablet {
     width: 230px;
   }
 }
-.desing .desing_body .desing_tablet img {
+.desing .desing_body .desing_bg .desing_tablet img {
+  min-height: auto;
   width: 100%;
 }
 .desing .desing_body .desing_phone {

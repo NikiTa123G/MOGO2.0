@@ -59,7 +59,7 @@ if (parallax && (window.innerWidth > 800)) {
 	const parallaxTablet = document.querySelector('.parallax_tablet > img');
 	// coefficient
 	// console.log(parallaxBg)
-	const forBg = 30;
+	const forBg = 40;
 	const forPhone = 5;
 	const forTablet = 20;
 
@@ -80,7 +80,7 @@ if (parallax && (window.innerWidth > 800)) {
 	}
 	setParalaxStyle();
 
-	parallax.addEventListener("mousemove", function(e){
+	window.addEventListener("mousemove", function(e){
 		const parallaxWidth = parallax.offsetWidth;
 		const parallaxHeight = parallax.offsetHeight;
 		// Style
