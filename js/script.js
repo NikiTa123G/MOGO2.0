@@ -53,10 +53,12 @@ window.onscroll = function navIvents() {
 //===================---//parallax//---======================//
 const parallax = document.querySelector('.parallax');
 
+const parallaxBg = document.querySelector('.parallax_bg > img');
+const parallaxPhone = document.querySelector('.parallax_phone > img');
+const parallaxTablet = document.querySelector('.parallax_tablet > img');
+
 if (parallax && (window.innerWidth > 800)) {
-	const parallaxBg = document.querySelector('.parallax_bg > img');
-	const parallaxPhone = document.querySelector('.parallax_phone > img');
-	const parallaxTablet = document.querySelector('.parallax_tablet > img');
+	
 	// coefficient
 	// console.log(parallaxBg)
 	const forBg = 40;
@@ -81,6 +83,11 @@ if (parallax && (window.innerWidth > 800)) {
 	setParalaxStyle();
 
 	window.addEventListener("mousemove", function(e){
+		if (window.innerWidth < 800) {
+			parallaxBg.style.cssText = `transform: translate(0%, 0%)`;
+			parallaxPhone.style.cssText = `transform: translate(0%, 0%)`;
+			parallaxTablet.style.cssText = `transform: translate(0%, 0%)`
+		}
 		const parallaxWidth = parallax.offsetWidth;
 		const parallaxHeight = parallax.offsetHeight;
 		// Style
@@ -93,6 +100,8 @@ if (parallax && (window.innerWidth > 800)) {
 
 		coordXprosent = coordX / parallaxWidth * 100;
 		coordYprosent = coordY / parallaxWidth * 100;
+
+
 	});
 }
 //===================---//parallax//---======================//
@@ -209,7 +218,7 @@ let = sliderPopap = new Swiper('.popap_slider',{
 	// 	},
 	// },
 
-	autoHeight: true,
+	// autoHeight: true,
 
 	// effect: 'cube',
 
