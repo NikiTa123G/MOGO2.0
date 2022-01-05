@@ -1210,6 +1210,7 @@ li{
 			.popap_content{
 				@media (max-width: 800px) {
 					max-width: 100%;
+					transition: opacity 1s;
 				}
 				height: 100%;
 				transform: perspective(0px) translate(0, 0%) rotatex(0deg);
@@ -1285,10 +1286,10 @@ li{
 								// object-fit: contain;
 								max-height: 95vh;
 							}
-							@media (max-width: 800px) {
+							@media (max-width: 950px) {
 								max-width: 95vw;
 							}
-							// max-width: 100%;
+							max-width: 900px;
 							object-fit: contain;
 							max-height: 100%;
 							&::selection{

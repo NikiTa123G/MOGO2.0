@@ -1629,6 +1629,8 @@ li {
 @media (max-width: 800px) {
   .popap.open .popap_body .popap_content {
     max-width: 100%;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
   }
 }
 .popap .clouce_btn {
@@ -1707,6 +1709,7 @@ li {
   }
 }
 .popap .popap_body .popap_content .popap_slider .gallery_wrapper .gallery_slide img {
+  max-width: 900px;
   -o-object-fit: contain;
      object-fit: contain;
   max-height: 100%;
@@ -1716,7 +1719,7 @@ li {
     max-height: 95vh;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .popap .popap_body .popap_content .popap_slider .gallery_wrapper .gallery_slide img {
     max-width: 95vw;
   }
