@@ -218,7 +218,7 @@ let = sliderPopap = new Swiper('.popap_slider',{
 	// 	},
 	// },
 
-	// autoHeight: true,
+	autoHeight: true,
 
 	// effect: 'cube',
 
