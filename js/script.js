@@ -2,6 +2,7 @@
 
 const navBurger = document.querySelector('.burger');
 const nav = document.querySelector('.nav');
+const body = document.querySelector('body');
 
 navBurger.addEventListener("click", function() {
 	navBurger.classList.toggle('active');
@@ -185,7 +186,6 @@ function removeActiveNavLinck() {
 //======================---//popup//---==========================//
 
 const popapLinkcs = document.querySelectorAll('.popap_linck');
-const body = document.querySelector('body');
 const lockPading = document.querySelector(".lock_pading");
 
 let unlock = true;
@@ -230,6 +230,14 @@ let = sliderPopap = new Swiper('.popap_slider',{
 	// },
 });
 
+var gallerySlides = document.querySelectorAll('.gallery_slide');
+window.addEventListener("resize", function() {
+	for (let i = 0; i < gallerySlides.length; i++) {
+		let gallerySlide = gallerySlides[i];
+		gallerySlide.style.cssText = '';
+	}
+})
+
 if (popapLinkcs.length > 0) {
 	for (let i = 0; i < popapLinkcs.length; i++) {
 		const popapLinck = popapLinkcs[i];
@@ -264,9 +272,9 @@ function popapOpen(curentPopap) {
 		if (popapActive) {
 			popapClose(popapActive, false);
 		}
-		// else {
-		// 	bodyLock();
-		// }
+		else {
+			bodyLock();
+		}
 		curentPopap.classList.add('open');
 		nav.classList.add('up_nav');
 		curentPopap.addEventListener("click", function(e) {
@@ -288,21 +296,21 @@ function popapClose (popapActive, doUnlock = true) {
 	}
 }
 
-// function bodyLock() {
-// 	const lockPadingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-// 	if (lockPading) {
-// 		for (let i = 0; i < lockPading.length; i++) {
-// 			const el = lockPading[i];
-// 			el.style.padingRight = lockPadingValue;
-// 		}
-// 	}
-// 	body.classList.add('lock');
+function bodyLock() {
+	const lockPadingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	if (lockPading) {
+		for (let i = 0; i < lockPading.length; i++) {
+			const el = lockPading[i];
+			el.style.padingRight = lockPadingValue;
+		}
+	}
+	body.classList.add('lock');
 
-// 	unlock = false;
-// 	setTimeout(function() {
-// 		unlock = true;
-// 	}, timeout);
-// }
+	unlock = false;
+	setTimeout(function() {
+		unlock = true;
+	}, timeout);
+}
 
 function bodyUnLock() {
 	setTimeout(function() {
