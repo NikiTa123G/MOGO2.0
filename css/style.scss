@@ -1254,6 +1254,9 @@ li{
 		align-items: center;
 		justify-content: center;
 		.popap_content{
+			@media (max-width: 1024px) {
+				max-width: 100%;
+			}
 			@media (min-width: 800px) {
 				transform: perspective(600px) translate(0, -100%) rotatex(45deg);
 			}
@@ -1267,8 +1270,10 @@ li{
 			visibility: hidden;
 			overflow: hidden;
 			.popap_slider{
+				max-width: 100%;
 				position: relative;
 				.gallery_wrapper{
+					max-width: 100%;
 					.gallery_slide{
 						@media (max-height: 700px) {
 							height: 95vh;

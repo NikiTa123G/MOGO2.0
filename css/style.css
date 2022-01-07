@@ -1682,6 +1682,11 @@ li {
   visibility: hidden;
   overflow: hidden;
 }
+@media (max-width: 1024px) {
+  .popap .popap_body .popap_content {
+    max-width: 100%;
+  }
+}
 @media (min-width: 800px) {
   .popap .popap_body .popap_content {
     -webkit-transform: perspective(600px) translate(0, -100%) rotatex(45deg);
@@ -1689,7 +1694,11 @@ li {
   }
 }
 .popap .popap_body .popap_content .popap_slider {
+  max-width: 100%;
   position: relative;
+}
+.popap .popap_body .popap_content .popap_slider .gallery_wrapper {
+  max-width: 100%;
 }
 .popap .popap_body .popap_content .popap_slider .gallery_wrapper .gallery_slide {
   height: 650px;
