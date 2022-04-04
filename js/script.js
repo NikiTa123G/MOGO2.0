@@ -23,16 +23,13 @@ window.addEventListener("resize", function() {
 //===================---//nav//---======================//
 
 const windowHeight = window.innerHeight;
+if (window.scrollY > windowHeight * 0.4) {
+	nav.classList.add('color');
+}
 
-// function navIvents() 
-// document.addEventListener("DOMContentLoaded", function(){
-	if (window.scrollY > windowHeight * 0.4) {
-		nav.classList.add('color');
-	}
-// });
 window.onscroll = function navIvents() {
 	const scrollY = window.scrollY;
-
+	
 	if (scrollY > windowHeight * 0.4) {
 		nav.classList.add('color');
 	}else{
@@ -41,7 +38,8 @@ window.onscroll = function navIvents() {
 	for (let i = 0; i < navLincks.length; i++) {
 		let scrollToItem = document.querySelector(navLincks[i].dataset.goto);
 		let scrollToValue = scrollToItem.offsetTop;
-		if ((scrollY > scrollToValue - windowHeight * 0.7) && (scrollY < scrollToValue + windowHeight * 0.3) && keyNavLinck) {
+		let menuPosition = scrollY > scrollToValue - windowHeight * 0.7 && scrollY < scrollToValue + windowHeight * 0.3 && keyNavLinck
+		if (menuPosition) {
 			removeActiveNavLinck();
 			navLincks[i].closest('.menu_item').classList.add('active');
 		}
